@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agendar Cita con Servicios</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Agendar Cita 🗓️ + Servicios</h1>
+
+  <form id="appointmentForm">
+    <label for="petId">Mascota:</label><br>
+    <select id="petId" name="petId" required></select><br><br>
+
+    <label for="dateTime">Fecha y Hora:</label><br>
+    <input type="datetime-local" id="dateTime" name="dateTime" required><br><br>
+
+    <label for="description">Descripción:</label><br>
+    <input type="text" id="description" name="description" required><br><br>
+
+    <fieldset>
+      <legend>Servicios:</legend>
+      <div id="serviceList"></div>
+    </fieldset><br>
+
+    <button type="submit">Agendar Cita</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script src="js/appointments.js"></script>
+</body>
+</html>

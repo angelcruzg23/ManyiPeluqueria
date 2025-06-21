@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar Dueño</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Registrar Dueño 🐾</h1>
+
+  <form id="ownerForm">
+    <label for="name">Nombre:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="phone">Teléfono:</label><br>
+    <input type="text" id="phone" name="phone" required><br><br>
+
+    <div id="pets-container">
+      <h3>Mascotas:</h3>
+      <div class="pet-group">
+        <input type="text" name="petName" placeholder="Nombre mascota" required>
+        <input type="text" name="petBreed" placeholder="Raza" required>
+        <input type="number" name="petAge" placeholder="Edad" required>
+      </div>
+    </div>
+
+    <button type="button" id="addPet">+ Agregar otra mascota</button><br><br>
+    <button type="submit">Guardar</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script src="js/owners.js"></script>
+</body>
+</html>

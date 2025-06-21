@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Recibo de cita</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    h1 { color: #333; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #f0f0f0; }
+    .total { text-align: right; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Recibo de Cita</h1>
+  <p><strong>Cliente:</strong> <%= appointment.Pet.Owner.name %></p>
+  <p><strong>Teléfono:</strong> <%= appointment.Pet.Owner.phone %></p>
+  <p><strong>Mascota:</strong> <%= appointment.Pet.name %> (<%= appointment.Pet.breed %>)</p>
+  <p><strong>Fecha y Hora:</strong> <%= appointment.dateTime.toLocaleString() %></p>
+  <p><strong>Descripción:</strong> <%= appointment.description %></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Servicio</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% services.forEach(service => { %>
+        <tr>
+          <td><%= service.name %></td>
+          <td>$<%= parseFloat(service.price).toFixed(2) %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="total">Total</td>
+        <td class="total">$<%= total.toFixed(2) %></td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>

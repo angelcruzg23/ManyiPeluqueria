@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar Mascota</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Registrar Mascota 🐶</h1>
+
+  <form id="petForm">
+    <label for="name">Nombre:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="breed">Raza:</label><br>
+    <input type="text" id="breed" name="breed" required><br><br>
+
+    <label for="age">Edad:</label><br>
+    <input type="number" id="age" name="age" required><br><br>
+
+    <label for="ownerId">Dueño:</label><br>
+    <select id="ownerId" name="ownerId" required></select><br><br>
+
+    <button type="submit">Guardar</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script src="js/pets.js"></script>
+</body>
+</html>
